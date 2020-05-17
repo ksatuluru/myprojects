@@ -3,6 +3,8 @@ package com.carona.restproject.beans;
 
 public class Customer {
 	
+	public int    id;
+	
 	public String fName;
 	public String lName;
 	public String addressLine1;
@@ -10,14 +12,29 @@ public class Customer {
 	public String state;
 	public String zip;
 	
-	public Customer(String fName, String lName, String addressLine1, String city, String state, String zip)
+	public Customer()
 	{
+		
+	}
+	
+	public Customer(int id, String fName, String lName, String addressLine1, String city, String state, String zip)
+	{
+		setId(id);
 		setfName(fName);
 		setlName(lName);
 		setAddressLine1(addressLine1);
 		setCity(city);
 		setState(state);
 		setZip(zip);
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 	public String getfName() {
